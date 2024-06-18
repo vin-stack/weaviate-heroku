@@ -3,4 +3,4 @@ build:
     web: Dockerfile
 
 run:
-  web: python app.py
+  web: docker-compose -f /weaviate_docker-compose.yml up
