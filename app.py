@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Use authentication credentials from environment variables
 auth_credentials = (os.getenv('WEAVIATE_AUTHENTICATION_ADMIN_USERNAME'), os.getenv('WEAVIATE_AUTHENTICATION_ADMIN_PASSWORD'))
-client = weaviate.Client("http://weaviate:8080", auth_client_secret=auth_credentials)
+client = weaviate.Client("http://localhost:8080", auth_client_secret=auth_credentials)
 
 # Ensure the Weaviate schema exists
 def ensure_schema():
